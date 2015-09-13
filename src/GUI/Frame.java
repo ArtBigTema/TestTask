@@ -18,6 +18,7 @@ public class Frame extends JFrame {
 	}
 
 	private void init() {
+		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		final short S_MAX = Data.S_MAX;
 		final byte GAP = Data.GAP;
 		final LayoutStyle.ComponentPlacement UNRELATED = LayoutStyle.ComponentPlacement.UNRELATED;
@@ -40,8 +41,6 @@ public class Frame extends JFrame {
 		JScrollPane skrollPaneGroup = new JScrollPane();
 
 		constructor();
-
-		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
 		initTables();
 
@@ -100,9 +99,6 @@ public class Frame extends JFrame {
 				TRAILING,
 				jPanel6Layout.createSequentialGroup().addGap(GAP, GAP, GAP).addComponent(toggleSort).addPreferredGap(UNRELATED)
 						.addComponent(scrollPaneStudent, D_SIZE, SIZE / 2, S_MAX)));
-
-		// buttStDelet.setMaximumSize(new java.awt.Dimension(51, 23));
-		// buttStDelet.setMinimumSize(new java.awt.Dimension(51, 23));
 
 		GroupLayout jPanel7Layout = new GroupLayout(jPanel7);
 		jPanel7.setLayout(jPanel7Layout);
@@ -193,14 +189,14 @@ public class Frame extends JFrame {
 		buttStAdd.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent p) {
-				DialogGroup d = new DialogGroup(Frame.this);
+				DialogStudent d = new DialogStudent(Frame.this);
 				d.setVisible(true);
 			}
 		});
 		buttStChange.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent p) {
-				DialogGroup d = new DialogGroup(Frame.this);
+				DialogStudent d = new DialogStudent(Frame.this);
 				d.setVisible(true);
 			}
 		});

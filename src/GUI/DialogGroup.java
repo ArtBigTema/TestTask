@@ -5,7 +5,6 @@ import java.awt.event.ActionListener;
 
 import javax.swing.*;
 
-import substance.Main;
 
 import Utils.Data;
 import Utils.Utils;
@@ -99,13 +98,15 @@ public class DialogGroup extends JDialog {
 		buttGrOk.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent p) {
-				Main.getInstance().addGroup(getAll());
+			//	Main.getInstance().addGroup(getAll());
+				getAll();
+				DialogGroup.this.dispose();
 			}
 		});
 		buttGrCancel.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent p) {
-
+				DialogGroup.this.dispose();
 			}
 		});
 	}

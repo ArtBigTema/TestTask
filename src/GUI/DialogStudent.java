@@ -16,7 +16,6 @@ import org.jdatepicker.impl.UtilDateModel;
 
 import com.google.common.base.Joiner;
 
-import substance.Main;
 
 import Utils.Data;
 import Utils.Utils;
@@ -128,13 +127,14 @@ public class DialogStudent extends JDialog {
 		buttGrOk.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent p) {
-				Main.getInstance().addStudent(getAll());
+			//	Main.getInstance().addStudent(getAll());
+				DialogStudent.this.dispose();
 			}
 		});
 		buttGrCancel.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent p) {
-
+				DialogStudent.this.dispose();
 			}
 		});
 	}
